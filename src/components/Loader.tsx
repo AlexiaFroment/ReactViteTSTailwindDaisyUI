@@ -1,9 +1,14 @@
+import { LoadingOutlined } from "@ant-design/icons"
+import { Flex, Spin } from "antd"
+
 export const Loader: React.FC = () => {
   return (
-    <>
-      <div className='flex justify-center'>
-        <span className='loading loading-dots loading-md text-primary'></span>
-      </div>
-    </>
+    <Flex align='center' gap='middle'>
+      <Spin
+        indicator={
+          <LoadingOutlined style={{ fontSize: 48, color: "pink" }} spin />
+        }
+      />
+    </Flex>
   )
 }
